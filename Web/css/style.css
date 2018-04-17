@@ -1,0 +1,81 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+header{
+	width:100%;
+	height:15%;
+	background-color: aqua;
+
+}
+
+header h1, header h3{
+	width:100%;
+	text-align:center;
+}
+
+header h3{
+	padding-top:5px;
+}
+
+header nav{
+	padding: 15px 10px;
+	border:1px solid black;
+	width:25%;
+	text-align:center;
+	margin:5px auto;
+}
+header nav a{
+	padding: 5px 5%;
+}
+
+header nav a:visited { 
+	color:black; }
+
+header img{
+	width:40px;
+	height:40px;
+	float:left;
+	cursor: pointer;
+}
+
+#cart_div{
+	width:200px;
+	height:60px;
+	position:absolute;
+	top:1%;
+	left:93%;
+}
+
+/* FIN DU STYLE DU HEADER */
+
+/* STYLE D'INDEX */
+
+#index_contenu{
+	display:grid;
+	grid-template-columns: 15% 85%;
+	grid-template-rows: 100%;
+	width:100%;
+	height:800px;
+}
+
+#index_categories{
+	grid-column: 1/2;
+	grid-row:1/2;
+	border:1px solid black;
+}
+
+#index_articles{
+	grid-column: 2/3;
+	grid-row:1/2;
+	border:1px solid black;
+}
+
+#index_search{
+	width:98%;
+	height:20px;
+	border-radius:20px;
+	padding:5px;
+	margin-top:5px;
+}
