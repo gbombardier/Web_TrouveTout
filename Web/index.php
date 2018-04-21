@@ -9,13 +9,13 @@
 <body>
 	<main id="index_contenu">
 		<div id="index_categories">
-			<h3 style= "margin-bottom:20px;">Categories de produits</h3>
+			<h2 style= "margin-bottom:20px;">Categories de produits</h2>
 			<!-- Populé par le code javascript, voir showCategories() -->
 		</div>
 		<div id="index_articles">
 			<input type="text" name = "index_search" id="index_search">
 			<div id = "index_listeArticles">
-
+				<!-- Populé par le code javascript, voir showArticles() -->
 			</div>
 		</div>
 	</main>
