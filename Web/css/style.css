@@ -31,7 +31,8 @@ header nav a{
 }
 
 header nav a:visited { 
-	color:black; }
+	color:black; 
+}
 
 header img{
 	width:40px;
@@ -79,3 +80,95 @@ header img{
 	padding:5px;
 	margin-top:5px;
 }
+
+.categoryInList{
+	float:left;
+	width:100%;
+	text-decoration: none;
+	cursor: pointer;
+	padding:5px;
+	color:black; 
+}
+
+.categoryInList:visited { 
+	color:black; 
+}
+/* FIN DU STYLE DE INDEX */
+#bodyNoAccount{
+	width: 960px;
+	text-align:center;
+	margin:auto;
+}
+#notConnected{
+	margin: 20px;
+}
+#loginNoAccount{
+	margin:auto;
+	margin-top: 30px;
+	border-style: solid;
+	width:400px;
+	padding-bottom:30px;
+	border-color: aqua;
+}
+#loginNoAccount input{
+	padding:3px;
+}
+#emailNoAccount{
+	padding-left: 3px;
+	text-align: left;
+	position: relative;
+	width:100%
+}
+#emailNoAccount input{
+	position: absolute;
+	right:5px;
+	width:70%;
+}
+#pwdNoAccount{
+	padding-left: 3px;
+	text-align: left;
+	position: relative;
+	width:100%;
+
+}
+#pwdNoAccount input{
+	position: absolute;
+	right:5px;
+	width:70%;
+}
+#createAccountA{
+	color:blue;
+}
+#createAccountA:hover{
+	color:aqua;
+
+}
+#createAccount{
+	margin-bottom:70px;
+}
+#backNoAccount{
+	margin-top:100px;
+	padding:5px;
+}
+#outsideSquare{
+	padding-top:40px;
+	margin:auto;
+	margin-top: 40px;
+	text-align:center;
+	border-style: solid;
+	border-color: aqua;
+	width:850px;
+	height:600px;
+}
+#outsideSquare p{
+	position: relative;
+	padding: 20px;	
+	width:60%;
+	margin:auto;
+}
+#sendcomment{
+	padding:2px;
+	margin:10px;
+}
+
+

@@ -24,6 +24,24 @@
 			}
 			
 			//Si l'usagé n'est pas connecté, rediriger vers noAccount
+			// $this->wrongLogin = false;
+			
+			// if (isset($_POST["username"])) {
+			// 	$connection = Connection::getConnection($_POST["username"], $_POST["pwd"]);
+				
+			// 	if($connection == null){
+			// 		$errorMessage = "Username ou mot de passe invalide";
+			// 		header("location:index.php");
+			// 		$this->wrongLogin = true;
+			// 		exit;
+			// 	}else{
+			// 		$_SESSION["username"] = $_POST["username"];
+			// 		$_SESSION["pwd"] = $_POST["pwd"];
+			// 		$_SESSION["visibility"] = CommonAction::$VISIBILITY_MEMBER;
+			// 		header("location:editor.php");
+			// 		exit;
+			// 	}
+			// }
 		}
 	}
 	

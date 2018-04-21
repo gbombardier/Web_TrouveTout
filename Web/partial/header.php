@@ -3,7 +3,13 @@
 <head>
 	<title>Trouve-Tout</title>
 	<script src="js/jquery.js"></script>
+	<script src="js/DTO_Products.js"></script>
+	<script src="js/Models/Article.js"></script>
+	<script src="js/Models/Categorie.js"></script>
+	<script src="js/Models/Rabais.js"></script>
+	<script src="js/Models/User.js"></script>
 	<script src="js/javascript.js"></script>
+	
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="utf8">
 </head>
