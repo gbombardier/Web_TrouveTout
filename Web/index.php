@@ -9,7 +9,6 @@
 <body>
 	<main id="index_contenu">
 		<div id="index_categories">
-			<h2 style= "margin-bottom:20px;">Categories de produits</h2>
 			<!-- Populé par le code javascript, voir showCategories() -->
 		</div>
 		<div id="index_articles">

@@ -100,7 +100,36 @@ header img{
 	border: 1px solid black;
 	float:left;
 	margin:2.25%;
+	cursor:pointer;
 }
+
+#buttonReturn{
+	float:left;
+	width:80px;
+	margin-top:10px;
+}
+
+.imageArticle{
+	width:20%;
+	height:20%;
+	float:right;
+	margin-right:50px;
+}
+
+#currentArticlePrice{
+	float:right;
+	margin:20px 50px;
+	width:20%;
+	text-align: center;
+}
+
+#buttonAddBasket{
+	float:right;
+	width:140px;
+	margin-top:10px;
+	margin-right:8.5%;
+}
+
 /* FIN DU STYLE DE INDEX */
 
 
