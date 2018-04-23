@@ -6,6 +6,12 @@
 
 	require_once("partial/header.php");
 ?>
+
+<script>
+	window.onload = () => {
+		showCategories();
+	}
+</script>
 <body>
 	<main id="index_contenu">
 		<div id="index_categories">
