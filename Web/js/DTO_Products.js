@@ -24,15 +24,12 @@ class DTO_Products{
 	}
 
 	getCategories(){
-		
-
 
 		return this.categories;
 	}
 
 	getArticles(id_categorie){
-
-
+		
 		let tabArticlesTemp = [];
 
 		for(let i = 0; i < this.articles.length; i++){

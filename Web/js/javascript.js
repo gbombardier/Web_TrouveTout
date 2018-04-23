@@ -8,15 +8,27 @@ window.onload = () => {
 
 //Va chercher toutes les catégories disponibles et les affiche
 function showCategories(){
-	categories = dtoProducts.getCategories();
-	let title = document.createElement("h2");
-	title.setAttribute("style", "margin-bottom:20px;");
-	title.innerHTML = "Categories de produits";
-	document.getElementById("index_categories").appendChild(title);
+	$.ajax({
+		url : "ajaxCategories.php",
+		type : "POST",
+		data: {
+		}
+	}).done(function(msg){
+		let response = JSON.parse(msg);
 
-	for(let i = 0; i<categories.length;i++){
-		addCategoryToList(categories[i]);
-	}
+		for(let i = 0; i<response.length;i++){
+			categories.push(new Categorie(response[i].ID_CAT, response[i].NOM));
+		}
+
+		let title = document.createElement("h2");
+		title.setAttribute("style", "margin-bottom:20px;");
+		title.innerHTML = "Categories de produits";
+		document.getElementById("index_categories").appendChild(title);
+
+		for(let i = 0; i<categories.length;i++){
+			addCategoryToList(categories[i]);
+		}
+	});
 }
 
 //Crée un lien vers la page de categories dans la liste a gauche
@@ -26,7 +38,7 @@ function addCategoryToList(category){
 	newCategory.innerHTML = category.name;
 
 	newCategory.onclick = function(event){
-		showArticles(category.id);
+		showArticles(Number(category.id));
 	}
 
 	let container = document.getElementById("index_categories");
@@ -35,12 +47,34 @@ function addCategoryToList(category){
 
 //Va chercher tous les articles en lien avec une catégorie et les affiche
 function showArticles(id_category){
-	currentArticles = dtoProducts.getArticles(id_category);
-	document.getElementById("index_listeArticles").innerHTML = "";
+	console.log(id_category);
+	$.ajax({
+		url : "ajaxArticles.php",
+		type : "POST",
+		data: {
+			id:id_category
+		}
+	}).done(function(msg){
+		let response = JSON.parse(msg);
 
-	for(let i = 0; i<currentArticles.length;i++){
-		addArticleToList(currentArticles[i]);
-	}
+		document.getElementById("index_listeArticles").innerHTML = "";
+		currentArticles = [];
+
+		for(let i = 0; i<response.length;i++){
+			currentArticles.push(new Article(response[i].ID_ARTICLE, response[i].ID_RABAIS, response[i].ID_CAT, response[i].NOM, response[i].ART_DESCRIPTION, response[i].PRIX_BASE, response[i].PRIX_COURANT, response[i].EN_RABAIS));
+		}
+
+		for(let i = 0; i<currentArticles.length;i++){
+			addArticleToList(currentArticles[i]);
+		}
+	});
+
+	// currentArticles = dtoProducts.getArticles(id_category);
+	// document.getElementById("index_listeArticles").innerHTML = "";
+
+	// for(let i = 0; i<currentArticles.length;i++){
+	// 	addArticleToList(currentArticles[i]);
+	// }
 }
 
 //ajoute un article dans la liste de droite
